@@ -20,5 +20,5 @@ serviceAccount:
 
 #imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
 imagePullSecrets: 
-    name: {{ .Values.image.pullSecret }}
+    - name: {{ .Values.image.pullSecret }}
 nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
