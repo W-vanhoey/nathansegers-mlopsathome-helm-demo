@@ -23,4 +23,4 @@ imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want 
 #    - name: {{ .Values.image.pullSecret }}
 #imagePullSecrets:
 #    - name: regcred
-nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
+# nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
