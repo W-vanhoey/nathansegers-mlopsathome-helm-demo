@@ -16,5 +16,5 @@ serviceAccount:
 ## Keep these empty for the first try.
 # imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
 # nodeSelector: {} # Fill in the right Node Selector here.
-imagePullSecrets: {{- toYaml . | nindent 8 }}
+imagePullSecrets: [{{- toYaml . | nindent 8 }}]
 nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
