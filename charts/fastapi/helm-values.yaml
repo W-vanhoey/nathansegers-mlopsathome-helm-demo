@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:  
-  repository: ghcr.io/nathansegers/fastapi-intro # You can keep this on my image, because of the Pull Secrets
-#  repository: ghcr.io/w-vanhoey/fastapi-intro
+#  repository: ghcr.io/nathansegers/fastapi-intro # You can keep this on my image, because of the Pull Secrets
+  repository: ghcr.io/w-vanhoey/fastapi-intro
   tag: v1.0.0
 
 # nameOverride: "nathan-fastapi"
@@ -17,5 +17,7 @@ serviceAccount:
 ## Keep these empty for the first try.
 # imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
 # nodeSelector: {} # Fill in the right Node Selector here.
-imagePullSecrets: {{- toYaml . | nindent 8 }}
+
+#imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
+imagePullSecrets: {{ .Values.image.pullSecret }}
 nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
