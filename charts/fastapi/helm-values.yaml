@@ -19,5 +19,6 @@ serviceAccount:
 # nodeSelector: {} # Fill in the right Node Selector here.
 
 #imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
-imagePullSecrets: {{ .Values.image.pullSecret }}
+imagePullSecrets: 
+    name: {{ .Values.image.pullSecret }}
 nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
