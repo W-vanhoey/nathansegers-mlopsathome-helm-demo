@@ -19,7 +19,8 @@ imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want 
 # nodeSelector: {} # Fill in the right Node Selector here.
 
 nodeSelector:
-    label: vanhoey-wim
+    #label: vanhoey-wim NOK
+      nodeName: vanhoey-wim
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
 # imagePullSecrets: 
