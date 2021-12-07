@@ -19,7 +19,8 @@ imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want 
 #nodeSelector: {} # Fill in the right Node Selector here.
 
 nodeSelector:
-    nodeName: "vanhoey-wim"
+    kubernetes.io/hostname: "van-hoey-wim"
+    #nodeName: "vanhoey-wim"
     #label: "vanhoey-wim"
     #disktype: ssd
 
