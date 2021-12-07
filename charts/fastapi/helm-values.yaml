@@ -18,7 +18,7 @@ serviceAccount:
 imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
 # nodeSelector: {} # Fill in the right Node Selector here.
 
-nodeSelector:    #label: vanhoey-wim NOK
+#nodeSelector:    #label: vanhoey-wim NOK
     #nodeName: vanhoey-wim
     #disktype: ssd
 
@@ -27,4 +27,4 @@ nodeSelector:    #label: vanhoey-wim NOK
 #    - name: {{ .Values.image.pullSecret }}
 # imagePullSecrets:
 #     - name: regcred
-# nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
+ nodeSelector: {"beta.kubernetes.io/arch": "amd64"}
