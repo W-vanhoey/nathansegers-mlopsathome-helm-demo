@@ -19,7 +19,8 @@ imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want 
 # nodeSelector: {} # Fill in the right Node Selector here.
 
 nodeSelector:    #label: vanhoey-wim NOK
-    nodeName: vanhoey-wim
+    #nodeName: vanhoey-wim
+    disktype: ssd
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
 # imagePullSecrets: 
