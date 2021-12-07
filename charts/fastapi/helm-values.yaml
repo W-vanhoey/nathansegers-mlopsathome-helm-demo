@@ -16,10 +16,11 @@ serviceAccount:
 
 ## Keep these empty for the first try.
 imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
-nodeSelector: {} # Fill in the right Node Selector here.
+#nodeSelector: {} # Fill in the right Node Selector here.
 
-#nodeSelector:    #label: vanhoey-wim NOK
-    #nodeName: vanhoey-wim
+nodeSelector:    #label: vanhoey-wim NOK
+    nodeName: "vanhoey-wim"
+    label: "vanhoey-wim"
     #disktype: ssd
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
