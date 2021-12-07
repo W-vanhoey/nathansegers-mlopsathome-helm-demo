@@ -18,7 +18,7 @@ serviceAccount:
 imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
 # nodeSelector: {} # Fill in the right Node Selector here.
 
-  nodeSelector:
+nodeSelector:
     label: vanhoey-wim
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
