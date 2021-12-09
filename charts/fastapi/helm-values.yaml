@@ -27,7 +27,7 @@ nodeSelector:
     #disktype: ssd
 
 imagePullSecrets:
-      - name: "ghcr-vanhoey-wim-3"           # Name of the secret
+      - name: "ghcr-vanhoey-wim-2"           # Name of the secret
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
 # imagePullSecrets: 
