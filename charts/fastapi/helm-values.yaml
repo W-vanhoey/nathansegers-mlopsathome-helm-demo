@@ -15,14 +15,19 @@ serviceAccount:
     name: helm-service-account ## This is a name you can choose yourself
 
 ## Keep these empty for the first try.
-imagePullSecrets: [] # Here you can fill in your own Pull Secret if you do want to work with your own repository
-nodeSelector: {} # Fill in the right Node Selector here.
+##------------------------------------
+#imagePullSecrets: [] # Here you can fill in your own Pull Secret  (empty = only for public repositories)
+#nodeSelector: {} # Fill in the right Node Selector here.
 
-#nodeSelector:
-#    kubernetes.io/hostname: "van-hoey-wim"
-    #nodeName: "vanhoey-wim"
-    #label: "vanhoey-wim"
+## Second try.
+##------------------------------------
+nodeSelector:
+    kubernetes.io/hostname: "vanhoey-wim"    # or    nodeName: "vanhoey-wim"
+    kubernetes.io/os: "linux"
     #disktype: ssd
+
+imagePullSecrets:
+      - name: "ghcr-vanhoey-wim-3"           # Name of the secret
 
 # imagePullSecrets: {{- toYaml . | nindent 8 }} # ERRORS
 # imagePullSecrets: 
